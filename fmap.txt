@@ -1,0 +1,136 @@
+0	covered query term number	body
+1	covered query term number	anchor
+2	covered query term number	title
+3	covered query term number	url
+4	covered query term number	whole document
+5	covered query term ratio	body
+6	covered query term ratio	anchor
+7	covered query term ratio	title
+8	covered query term ratio	url
+9	covered query term ratio	whole document
+10	stream length	body
+11	stream length	anchor
+12	stream length	title
+13	stream length	url
+14	stream length	whole document
+15	IDF(Inverse document frequency)	body
+16	IDF(Inverse document frequency)	anchor
+17	IDF(Inverse document frequency)	title
+18	IDF(Inverse document frequency)	url
+19	IDF(Inverse document frequency)	whole document
+20	sum of term frequency	body
+21	sum of term frequency	anchor
+22	sum of term frequency	title
+23	sum of term frequency	url
+24	sum of term frequency	whole document
+25	min of term frequency	body
+26	min of term frequency	anchor
+27	min of term frequency	title
+28	min of term frequency	url
+29	min of term frequency	whole document
+30	max of term frequency	body
+31	max of term frequency	anchor
+32	max of term frequency	title
+33	max of term frequency	url
+34	max of term frequency	whole document
+35	mean of term frequency	body
+36	mean of term frequency	anchor
+37	mean of term frequency	title
+38	mean of term frequency	url
+39	mean of term frequency	whole document
+40	variance of term frequency	body
+41	variance of term frequency	anchor
+42	variance of term frequency	title
+43	variance of term frequency	url
+44	variance of term frequency	whole document
+45	sum of stream length normalized term frequency	body
+46	sum of stream length normalized term frequency	anchor
+47	sum of stream length normalized term frequency	title
+48	sum of stream length normalized term frequency	url
+49	sum of stream length normalized term frequency	whole document
+50	min of stream length normalized term frequency	body
+51	min of stream length normalized term frequency	anchor
+52	min of stream length normalized term frequency	title
+53	min of stream length normalized term frequency	url
+54	min of stream length normalized term frequency	whole document
+55	max of stream length normalized term frequency	body
+56	max of stream length normalized term frequency	anchor
+57	max of stream length normalized term frequency	title
+58	max of stream length normalized term frequency	url
+59	max of stream length normalized term frequency	whole document
+60	mean of stream length normalized term frequency	body
+61	mean of stream length normalized term frequency	anchor
+62	mean of stream length normalized term frequency	title
+63	mean of stream length normalized term frequency	url
+64	mean of stream length normalized term frequency	whole document
+65	variance of stream length normalized term frequency	body
+66	variance of stream length normalized term frequency	anchor
+67	variance of stream length normalized term frequency	title
+68	variance of stream length normalized term frequency	url
+69	variance of stream length normalized term frequency	whole document
+70	sum of tf*idf	body
+71	sum of tf*idf	anchor
+72	sum of tf*idf	title
+73	sum of tf*idf	url
+74	sum of tf*idf	whole document
+75	min of tf*idf	body
+76	min of tf*idf	anchor
+77	min of tf*idf	title
+78	min of tf*idf	url
+79	min of tf*idf	whole document
+80	max of tf*idf	body
+81	max of tf*idf	anchor
+82	max of tf*idf	title
+83	max of tf*idf	url
+84	max of tf*idf	whole document
+85	mean of tf*idf	body
+86	mean of tf*idf	anchor
+87	mean of tf*idf	title
+88	mean of tf*idf	url
+89	mean of tf*idf	whole document
+90	variance of tf*idf	body
+91	variance of tf*idf	anchor
+92	variance of tf*idf	title
+93	variance of tf*idf	url
+94	variance of tf*idf	whole document
+95	boolean model	body
+96	boolean model	anchor
+97	boolean model	title
+98	boolean model	url
+99	boolean model	whole document
+100	vector space model	body
+101	vector space model	anchor
+102	vector space model	title
+103	vector space model	url
+104	vector space model	whole document
+105	BM25	body
+106	BM25	anchor
+107	BM25	title
+108	BM25	url
+109	BM25	whole document
+110	LMIR.ABS	body
+111	LMIR.ABS	anchor
+112	LMIR.ABS	title
+113	LMIR.ABS	url
+114	LMIR.ABS	whole document
+115	LMIR.DIR	body
+116	LMIR.DIR	anchor
+117	LMIR.DIR	title
+118	LMIR.DIR	url
+119	LMIR.DIR	whole document
+120	LMIR.JM	body
+121	LMIR.JM	anchor
+122	LMIR.JM	title
+123	LMIR.JM	url
+124	LMIR.JM	whole document
+125	Number of slash in URL	
+126	Length of URL	
+127	Inlink number	
+128	Outlink number	
+129	PageRank	
+130	SiteRank	
+131	QualityScore	
+132	QualityScore2	
+133	Query-url click count	
+134	url click count	
+135	url dwell time	
