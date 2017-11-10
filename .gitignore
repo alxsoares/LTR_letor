@@ -1,2 +1,5 @@
 *.pyc
 *.txt
+RankSVM/svm_rank_classify
+RankSVM/svm_rank_learn
+tmp/
