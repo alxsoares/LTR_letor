@@ -15,13 +15,11 @@ from common import cal_group_avg_metric
 from common import colors
 
 class XgbRanker(object):
-    
     def __init__(self, params, feature_map):
         self.params = params
         self.xgb_model = None
         self.feature_map = feature_map
 
-    
     def cal_feature_importance(self, booster, importance_type = 'gain'):
         ''' 
             Args:
@@ -32,9 +30,9 @@ class XgbRanker(object):
                 sorted_scores:
         '''
         fscores = booster.get_fscore()
-        sorted_fscores = sorted(fscores.items(), key = (lambda x: x[1]), reverse = True)
+        sorted_fscores = sorted(fscores.items(), key = lambda x: x[1], reverse = True)
         scores = booster.get_score(importance_type = importance_type)
-        sorted_scores = sorted(scores.items(), key = (lambda x: x[1]), reverse = True)
+        sorted_scores = sorted(scores.items(), key = lambda x: x[1], reverse = True)
         print colors.BLUE + '-' * 30 + ' The feature importance of each feature ' + '-' * 30 + colors.ENDC
         pos = 0
         for (feature, value) in sorted_fscores:
@@ -49,7 +47,6 @@ class XgbRanker(object):
         
         return (sorted_fscores, sorted_scores)
 
-    
     def pointwise_train(self, x_train, y_train, x_test, y_test, train_grp_len_list, test_grp_len_list, useRegression = True):
         if useRegression:
             self.xgb_model = xgb.XGBRegressor(**None)
@@ -70,7 +67,6 @@ class XgbRanker(object):
         print 'In the test data set: '
         cal_group_avg_metric(y_test, y_test_pred, test_grp_len_list)
 
-    
     def pairwise_train(self, x_train, y_train, x_test, y_test, train_grp_len_list, test_grp_len_list):
         dtrain = xgb.DMatrix(x_train, label = y_train)
         dtrain.set_group(train_grp_len_list)

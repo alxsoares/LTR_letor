@@ -11,6 +11,7 @@ from sklearn.datasets import load_svmlight_file
 from sklearn.datasets import dump_svmlight_file
 import conf
 from XgbRanker import XgbRanker 
+from RankSVMRanker import RankSVMRanker
 
 def load_fmap(fmap="fmap.txt"):
     feature_map = {}
@@ -58,8 +59,12 @@ def xgb_pairwise_train(feature_map):
     x_test, y_test, test_grp_len = load_raw_data(conf.test_data) 
     xgb_ranker.pairwise_train(x_train, y_train, x_test, y_test, train_grp_len, test_grp_len)
 
+def ranksvm_train():
+    svm_ranker = RankSVMRanker.RankSVMRanker() 
+
 if __name__ == '__main__':
-    feature_map = load_fmap()
+    ranksvm_train() 
+    #feature_map = load_fmap()
     #xgb_pointwise_regression(feature_map)
     #xgb_pointwise_classification(feature_map)
-    xgb_pairwise_train(feature_map)
+    #xgb_pairwise_train(feature_map)
