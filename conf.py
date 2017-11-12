@@ -21,3 +21,18 @@ pairwise_params = {'max_depth':6, 'learning_rate':0.1, 'n_estimators':150, 'sile
 #RankSVM
 learn_binary="RankSVMRanker/svm_rank_learn"
 classify_binary="RankSVMRanker/svm_rank_classify"
+
+
+#lightgbm lambdamart
+lambdamart_params = {
+    'boosting_type': 'gbdt',
+    'objective': 'lambdarank',
+    'metric': 'ndcg',
+    'num_leaves': 31,
+    'learning_rate': 0.05,
+    'feature_fraction': 0.9,
+    'bagging_fraction': 0.8,
+    'bagging_freq': 5,
+    'verbose': 0
+}
+num_boost_round=150

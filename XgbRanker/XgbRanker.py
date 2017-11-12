@@ -7,7 +7,6 @@
 '''
 import sys
 reload(sys).setdefaultencoding('utf-8')
-sys.path.append('../BaseRanker')
 sys.path.append('../')
 import xgboost as xgb
 import numpy as np

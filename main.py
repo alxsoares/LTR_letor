@@ -12,6 +12,7 @@ from sklearn.datasets import dump_svmlight_file
 import conf
 from XgbRanker import XgbRanker 
 from RankSVMRanker import RankSVMRanker
+from LambdaMartRanker import LambdaMartRanker
 
 def load_fmap(fmap="fmap.txt"):
     feature_map = {}
@@ -62,9 +63,16 @@ def xgb_pairwise_train(feature_map):
 def ranksvm_train():
     svm_ranker = RankSVMRanker.RankSVMRanker() 
 
+def lambdamart_train():
+    x_train, y_train, train_grp_len = load_raw_data(conf.training_data) 
+    x_test, y_test, test_grp_len = load_raw_data(conf.test_data) 
+    lambdamart_ranker = LambdaMartRanker.LambdaMartRanker(conf.lambdamart_params)
+    lambdamart_ranker.train(x_train, y_train, x_test, y_test, train_grp_len, test_grp_len)
+    
 if __name__ == '__main__':
-    ranksvm_train() 
+    #ranksvm_train() 
     #feature_map = load_fmap()
     #xgb_pointwise_regression(feature_map)
     #xgb_pointwise_classification(feature_map)
     #xgb_pairwise_train(feature_map)
+    lambdamart_train()
